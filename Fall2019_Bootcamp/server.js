@@ -8,7 +8,6 @@ var listingData, server;
 
 var requestHandler = function(request, response) {
   var parsedUrl = url.parse(request.url).pathname;
-  console.log('Requesting URL is: ' + request.url) 
 
   if (request.method === 'GET' && request.url === '/listings') {
     response.end(listingData);
